@@ -1,0 +1,21 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="lbforaging",
+    version="1.2.0",
+    description="Level Based Foraging Environment - HRI-EU Fork",
+    author="Filippos Christianos",
+    url="https://github.com/HRI-EU/lb-foraging",
+    packages=find_packages(exclude=["contrib", "docs", "tests"]),
+    classifiers=[
+        "Intended Audience :: Developers",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.9",
+    ],
+    install_requires=["numpy", "gym>=0.12", "pyglet"],
+    extras_require={"test": ["pytest"]},
+    include_package_data=True,
+)

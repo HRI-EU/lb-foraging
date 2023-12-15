@@ -1,0 +1,245 @@
+2023-08-23 11:57:41,517 - INFO  [run_experiments.py:run_experiment():l 47] Running experiments using the MultiHeuristicAgent class with ability ADAPTIVE
+2023-08-23 11:57:41,524 - INFO  [run_experiments.py:run_experiment():l 77] Registering environment Foraging-25x25-2p-10f-0.3coop-v2
+2023-08-23 11:57:41,524 - INFO  [run_experiments.py:run_experiment():l 93] Setting environment main seed to 741
+2023-08-23 11:57:41,529 - INFO  [environment.py:spawn_food():l 413] Spawning 3 cooperative, 7 individual, and 0 distractor items
+2023-08-23 11:57:41,534 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (22, 13) (coop=0.3)
+2023-08-23 11:57:41,538 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (2, 21) (coop=0.3)
+2023-08-23 11:57:41,544 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (4, 8) (coop=0.3)
+2023-08-23 11:57:41,548 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (19, 17) (coop=0.3)
+2023-08-23 11:57:41,552 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (8, 17) (coop=0.3)
+2023-08-23 11:57:41,555 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (5, 1) (coop=0.3)
+2023-08-23 11:57:41,559 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 11:57:41,563 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (23, 7) (coop=0.3)
+2023-08-23 11:57:41,566 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 11:57:41,566 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (12, 14) (coop=0.3)
+2023-08-23 11:57:41,569 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (6, 13) (coop=0.3)
+2023-08-23 11:57:41,569 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (19, 5) (coop=0.3)
+2023-08-23 11:57:41,573 - INFO  [run_experiments.py:run_experiment():l 103] Starting trial number 0
+2023-08-23 11:57:41,576 - INFO  [environment.py:spawn_food():l 413] Spawning 3 cooperative, 7 individual, and 0 distractor items
+2023-08-23 11:57:41,579 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (8, 22) (coop=0.3)
+2023-08-23 11:57:41,584 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (23, 21) (coop=0.3)
+2023-08-23 11:57:41,587 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 11:57:41,592 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (17, 22) (coop=0.3)
+2023-08-23 11:57:41,596 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 11:57:41,600 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (2, 19) (coop=0.3)
+2023-08-23 11:57:41,603 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 11:57:41,607 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (20, 20) (coop=0.3)
+2023-08-23 11:57:41,611 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (17, 14) (coop=0.3)
+2023-08-23 11:57:41,617 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (7, 5) (coop=0.3)
+2023-08-23 11:57:41,621 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (14, 14) (coop=0.3)
+2023-08-23 11:57:41,625 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (9, 3) (coop=0.3)
+2023-08-23 11:57:41,630 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (18, 3) (coop=0.3)
+2023-08-23 11:57:41,631 - INFO  [lbf_heuristic_agents.py:_game_loop():l 59] Initial observation:
+2023-08-23 11:57:41,631 - INFO  [lbf_heuristic_agents.py:_game_loop():l 60] Observation(field=array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        2, 0, 0],
+       [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+        2, 0, 0],
+       [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0]], dtype=int32), actions=[<Action.NONE: 0>, <Action.NORTH: 1>, <Action.SOUTH: 2>, <Action.WEST: 3>, <Action.EAST: 4>], players=[PlayerObservation(position=(10, 20), level=1, history=[], reward=0, is_self=True, goal_position=None, self_observed_position=None), PlayerObservation(position=(13, 24), level=1, history=[], reward=None, is_self=False, goal_position=None, self_observed_position=None)], game_over=False, sight=25, current_step=0)
+2023-08-23 11:57:41,654 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:41,656 - INFO  [lbf_heuristic_agents.py:_game_loop():l 74] Tuple(Discrete(6), Discrete(6))
+2023-08-23 11:57:41,660 - INFO  [lbf_heuristic_agents.py:_game_loop():l 75] Tuple(Box(-1.0, 25.0, (36,), float32), Box(-1.0, 25.0, (36,), float32))
+2023-08-23 11:57:41,666 - INFO  [lbf_heuristic_agents.py:_game_loop():l 78] Using agents with heuristic MultiHeuristicAgent
+2023-08-23 11:57:41,670 - INFO  [lbf_heuristic_agents.py:_game_loop():l 95] Applying multiheuristic labeled 'ADAPTIVE'
+2023-08-23 11:57:41,670 - INFO  [agent.py:  __init__():l 48] Setting up agent 0 with level 1
+2023-08-23 11:57:41,673 - INFO  [multi_heuristic_agents_value_function.py:set_abilities():l 186] Agent abilities: {'goal': {'location': True, 'location_history': False, 'distance': True, 'level': True, 'focus': True}, 'own': {'location': True, 'location_history': True, 'level': True, 'understands_action': True, 'remembers_action': True, 'next_action': False, 'next_location': False, 'competitive': False, 'opportunistic': False, 'selfless': True}, 'other': {'location': True, 'level': True, 'goal': {'location': False, 'distance': False, 'level': False}, 'fairness': False, 'next_action': False, 'next_location': False}}
+2023-08-23 11:57:41,677 - INFO  [multi_heuristic_agents_value_function.py:  __init__():l 166] Setup Agent as MultiHeuristicAgent 0 with level 1 and strategy adaptive
+2023-08-23 11:57:41,681 - INFO  [agent.py:  __init__():l 48] Setting up agent 1 with level 1
+2023-08-23 11:57:41,684 - INFO  [multi_heuristic_agents_value_function.py:set_abilities():l 186] Agent abilities: {'goal': {'location': True, 'location_history': False, 'distance': True, 'level': True, 'focus': True}, 'own': {'location': True, 'location_history': True, 'level': True, 'understands_action': True, 'remembers_action': True, 'next_action': False, 'next_location': False, 'competitive': False, 'opportunistic': False, 'selfless': True}, 'other': {'location': True, 'level': True, 'goal': {'location': False, 'distance': False, 'level': False}, 'fairness': False, 'next_action': False, 'next_location': False}}
+2023-08-23 11:57:41,690 - INFO  [multi_heuristic_agents_value_function.py:  __init__():l 166] Setup Agent as MultiHeuristicAgent 1 with level 1 and strategy adaptive
+2023-08-23 11:57:41,690 - INFO  [multi_heuristic_agents_value_function.py:     _step():l 935] no sufficient action history for forbidding actions
+2023-08-23 11:57:41,692 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 0 adaptive cooperative goal selected: loc (8, 22)
+2023-08-23 11:57:41,696 - INFO  [multi_heuristic_agents_value_function.py:     _step():l 935] no sufficient action history for forbidding actions
+2023-08-23 11:57:41,698 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (8, 22)
+2023-08-23 11:57:41,699 - INFO  [multi_heuristic_agents_value_function.py:     _step():l 935] no sufficient action history for forbidding actions
+2023-08-23 11:57:41,699 - INFO  [multi_heuristic_agents_value_function.py:     _step():l 935] no sufficient action history for forbidding actions
+2023-08-23 11:57:41,703 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 11:57:41,705 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 0 adaptive cooperative goal selected: loc (8, 22)
+2023-08-23 11:57:41,709 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (8, 22)
+2023-08-23 11:57:41,712 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 11:57:41,716 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 11:57:41,721 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 11:57:41,724 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 11:57:41,728 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 0 adaptive cooperative goal selected: loc (8, 22)
+2023-08-23 11:57:41,731 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (8, 22)
+2023-08-23 11:57:41,735 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 11:57:41,738 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 11:57:41,741 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 11:57:41,744 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 0 adaptive cooperative goal selected: loc (8, 22)
+2023-08-23 11:57:41,748 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (8, 22)
+2023-08-23 11:57:41,750 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 11:57:41,753 - INFO  [environment.py:spawn_food():l 413] Spawning 1 cooperative, 0 individual, and 0 distractor items
+2023-08-23 11:57:41,758 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 11:57:41,761 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (12, 13) (coop=0.3)
+2023-08-23 11:57:41,766 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 13: Player(s) [0 1] loaded food with level(s) [1. 1.] (type: [2 2], location: [[ 8 23]
+ [ 9 22]])
+2023-08-23 11:57:41,769 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:41,773 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (2, 19)
+2023-08-23 11:57:41,778 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (2, 19)
+2023-08-23 11:57:41,784 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (2, 19)
+2023-08-23 11:57:41,785 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (2, 19)
+2023-08-23 11:57:41,791 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (2, 19)
+2023-08-23 11:57:41,792 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (2, 19)
+2023-08-23 11:57:41,797 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 11:57:41,799 - INFO  [environment.py:spawn_food():l 413] Spawning 0 cooperative, 1 individual, and 0 distractor items
+2023-08-23 11:57:41,802 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (3, 17) (coop=0.3)
+2023-08-23 11:57:41,809 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 24: Player(s) [0] loaded food with level(s) [1] (type: [1], location: [[ 3 19]])
+2023-08-23 11:57:41,813 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:41,817 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (3, 17)
+2023-08-23 11:57:41,821 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (3, 17)
+2023-08-23 11:57:41,826 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 11:57:41,834 - INFO  [environment.py:spawn_food():l 413] Spawning 0 cooperative, 1 individual, and 0 distractor items
+2023-08-23 11:57:41,837 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (20, 9) (coop=0.3)
+2023-08-23 11:57:41,842 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 26: Player(s) [0] loaded food with level(s) [1] (type: [1], location: [[ 3 18]])
+2023-08-23 11:57:41,845 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:41,850 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (14, 14)
+2023-08-23 11:57:41,853 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (12, 13)
+2023-08-23 11:57:41,860 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (14, 14)
+2023-08-23 11:57:41,861 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (12, 13)
+2023-08-23 11:57:41,867 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (14, 14)
+2023-08-23 11:57:41,869 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (12, 13)
+2023-08-23 11:57:41,872 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 0 adaptive cooperative goal selected: loc (12, 13)
+2023-08-23 11:57:41,877 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (12, 13)
+2023-08-23 11:57:41,887 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(11, 13)]
+2023-08-23 11:57:41,890 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(11, 13)]
+2023-08-23 11:57:41,894 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 11:57:41,896 - INFO  [environment.py:spawn_food():l 413] Spawning 1 cooperative, 0 individual, and 0 distractor items
+2023-08-23 11:57:41,901 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (23, 11) (coop=0.3)
+2023-08-23 11:57:41,905 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 42: Player(s) [0 1] loaded food with level(s) [1. 1.] (type: [2 2], location: [[11 13]
+ [12 14]])
+2023-08-23 11:57:41,909 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:41,914 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (14, 14)
+2023-08-23 11:57:41,918 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (14, 14)
+2023-08-23 11:57:41,922 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 11:57:41,923 - INFO  [environment.py:spawn_food():l 413] Spawning 0 cooperative, 1 individual, and 0 distractor items
+2023-08-23 11:57:41,927 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (12, 6) (coop=0.3)
+2023-08-23 11:57:41,931 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 44: Player(s) [1] loaded food with level(s) [1] (type: [1], location: [[13 14]])
+2023-08-23 11:57:41,935 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:41,940 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (17, 14)
+2023-08-23 11:57:41,943 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (17, 14)
+2023-08-23 11:57:41,949 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (17, 14)
+2023-08-23 11:57:41,954 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (17, 14)
+2023-08-23 11:57:41,959 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 11:57:41,962 - INFO  [environment.py:spawn_food():l 413] Spawning 0 cooperative, 1 individual, and 0 distractor items
+2023-08-23 11:57:41,962 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (5, 6) (coop=0.3)
+2023-08-23 11:57:41,963 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 49: Player(s) [1] loaded food with level(s) [1] (type: [1], location: [[16 14]])
+2023-08-23 11:57:41,963 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:41,964 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (20, 9)
+2023-08-23 11:57:41,965 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (20, 9)
+2023-08-23 11:57:41,969 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (20, 9)
+2023-08-23 11:57:41,970 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (20, 9)
+2023-08-23 11:57:41,976 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (20, 9)
+2023-08-23 11:57:41,977 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (20, 9)
+2023-08-23 11:57:41,980 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 11:57:41,984 - INFO  [environment.py:spawn_food():l 413] Spawning 0 cooperative, 1 individual, and 0 distractor items
+2023-08-23 11:57:41,984 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (22, 19) (coop=0.3)
+2023-08-23 11:57:41,985 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 58: Player(s) [1] loaded food with level(s) [1] (type: [1], location: [[20 10]])
+2023-08-23 11:57:41,985 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:41,986 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 0 adaptive cooperative goal selected: loc (23, 11)
+2023-08-23 11:57:41,987 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (23, 11)
+2023-08-23 11:57:41,991 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(22, 11)]
+2023-08-23 11:57:42,000 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 0 adaptive cooperative goal selected: loc (23, 11)
+2023-08-23 11:57:42,001 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (23, 11)
+2023-08-23 11:57:42,006 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(22, 11)]
+2023-08-23 11:57:42,009 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(22, 11)]
+2023-08-23 11:57:42,012 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(22, 11)]
+2023-08-23 11:57:42,016 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(22, 11)]
+2023-08-23 11:57:42,021 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 0 adaptive cooperative goal selected: loc (23, 11)
+2023-08-23 11:57:42,025 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (23, 11)
+2023-08-23 11:57:42,029 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(22, 11)]
+2023-08-23 11:57:42,031 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(22, 11)]
+2023-08-23 11:57:42,034 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(22, 11)]
+2023-08-23 11:57:42,038 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 0 adaptive cooperative goal selected: loc (23, 11)
+2023-08-23 11:57:42,041 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (23, 11)
+2023-08-23 11:57:42,046 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 11:57:42,048 - INFO  [environment.py:spawn_food():l 413] Spawning 1 cooperative, 0 individual, and 0 distractor items
+2023-08-23 11:57:42,048 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (20, 4) (coop=0.3)
+2023-08-23 11:57:42,052 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 71: Player(s) [0 1] loaded food with level(s) [1. 1.] (type: [2 2], location: [[22 11]
+ [23 10]])
+2023-08-23 11:57:42,055 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:42,061 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (22, 19)
+2023-08-23 11:57:42,064 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 360] Agent 1 adaptive cooperative goal selected: loc (20, 4)
+2023-08-23 11:57:42,072 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (22, 19)
+2023-08-23 11:57:42,076 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (18, 3)
+2023-08-23 11:57:42,082 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (22, 19)
+2023-08-23 11:57:42,083 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (18, 3)
+2023-08-23 11:57:42,089 - INFO  [environment.py:      step():l 797] Respawning food (8 foods on field)
+2023-08-23 11:57:42,094 - INFO  [environment.py:spawn_food():l 413] Spawning 0 cooperative, 2 individual, and 0 distractor items
+2023-08-23 11:57:42,097 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 11:57:42,097 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (2, 4) (coop=0.3)
+2023-08-23 11:57:42,101 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (22, 10) (coop=0.3)
+2023-08-23 11:57:42,106 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 83: Player(s) [0 1] loaded food with level(s) [1 1] (type: [1 1], location: [[22 18]
+ [18  4]])
+2023-08-23 11:57:42,110 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:42,116 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (20, 20)
+2023-08-23 11:57:42,119 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (12, 6)
+2023-08-23 11:57:42,129 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 11:57:42,133 - INFO  [environment.py:spawn_food():l 413] Spawning 0 cooperative, 1 individual, and 0 distractor items
+2023-08-23 11:57:42,137 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (4, 13) (coop=0.3)
+2023-08-23 11:57:42,142 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 87: Player(s) [0] loaded food with level(s) [1] (type: [1], location: [[20 19]])
+2023-08-23 11:57:42,145 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:42,153 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (22, 10)
+2023-08-23 11:57:42,158 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (12, 6)
+2023-08-23 11:57:42,181 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (22, 10)
+2023-08-23 11:57:42,186 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (12, 6)
+2023-08-23 11:57:42,194 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 11:57:42,197 - INFO  [environment.py:spawn_food():l 413] Spawning 0 cooperative, 1 individual, and 0 distractor items
+2023-08-23 11:57:42,200 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 11:57:42,206 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (4, 16) (coop=0.3)
+2023-08-23 11:57:42,213 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 93: Player(s) [1] loaded food with level(s) [1] (type: [1], location: [[13  6]])
+2023-08-23 11:57:42,216 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:42,225 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (7, 5)
+2023-08-23 11:57:42,241 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (22, 10)
+2023-08-23 11:57:42,247 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 1 adaptive ego goal selected: loc (7, 5)
+2023-08-23 11:57:42,253 - INFO  [multi_heuristic_agents_value_function.py:_return_adaptive_strategic_goal():l 365] Agent 0 adaptive ego goal selected: loc (22, 10)
+2023-08-23 11:57:42,258 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 11:57:42,260 - INFO  [environment.py:spawn_food():l 413] Spawning 0 cooperative, 1 individual, and 0 distractor items
+2023-08-23 11:57:42,262 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (19, 14) (coop=0.3)
+2023-08-23 11:57:42,267 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 100: Player(s) [0] loaded food with level(s) [1] (type: [1], location: [[22 11]])
+2023-08-23 11:57:42,270 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[7 3] (player levels: [1, 1], c=0.300000, d=0.000000)
+2023-08-23 11:57:42,274 - INFO  [lbf_heuristic_agents.py:_game_loop():l 217] -------- SUCCESS - Step 100 - N collected food per player: [8, 8] (total value: [8.0, 8.0]), N cooperative actions: [3, 3]
+2023-08-23 11:57:42,307 - INFO  [run_experiments.py:run_experiment():l 110] Saving results to temp/Foraging-25x25-2p-10f-0.3coop-v2_game_data_trial_00.csv

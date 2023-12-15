@@ -1,0 +1,182 @@
+2023-08-23 10:47:01,164 - INFO  [run_experiments.py:run_experiment():l 47] Running experiments using the MultiHeuristicAgent class with ability SOCIAL1
+2023-08-23 10:47:01,165 - INFO  [run_experiments.py:run_experiment():l 77] Registering environment Foraging-25x25-2p-10f-0.8coop-v2
+2023-08-23 10:47:01,166 - INFO  [run_experiments.py:run_experiment():l 93] Setting environment main seed to 741
+2023-08-23 10:47:01,171 - INFO  [environment.py:spawn_food():l 413] Spawning 8 cooperative, 2 individual, and 0 distractor items
+2023-08-23 10:47:01,173 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (22, 13) (coop=0.8)
+2023-08-23 10:47:01,178 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (2, 21) (coop=0.8)
+2023-08-23 10:47:01,182 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (4, 8) (coop=0.8)
+2023-08-23 10:47:01,186 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (19, 17) (coop=0.8)
+2023-08-23 10:47:01,190 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (8, 17) (coop=0.8)
+2023-08-23 10:47:01,194 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (5, 1) (coop=0.8)
+2023-08-23 10:47:01,198 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 10:47:01,199 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (23, 7) (coop=0.8)
+2023-08-23 10:47:01,203 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 10:47:01,204 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (12, 14) (coop=0.8)
+2023-08-23 10:47:01,208 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (6, 13) (coop=0.8)
+2023-08-23 10:47:01,212 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (19, 5) (coop=0.8)
+2023-08-23 10:47:01,217 - INFO  [run_experiments.py:run_experiment():l 103] Starting trial number 0
+2023-08-23 10:47:01,221 - INFO  [environment.py:spawn_food():l 413] Spawning 8 cooperative, 2 individual, and 0 distractor items
+2023-08-23 10:47:01,225 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (8, 22) (coop=0.8)
+2023-08-23 10:47:01,229 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (23, 21) (coop=0.8)
+2023-08-23 10:47:01,233 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 10:47:01,234 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (17, 22) (coop=0.8)
+2023-08-23 10:47:01,238 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 10:47:01,239 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (2, 19) (coop=0.8)
+2023-08-23 10:47:01,242 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 10:47:01,242 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (20, 20) (coop=0.8)
+2023-08-23 10:47:01,247 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (17, 14) (coop=0.8)
+2023-08-23 10:47:01,252 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (7, 5) (coop=0.8)
+2023-08-23 10:47:01,257 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (14, 14) (coop=0.8)
+2023-08-23 10:47:01,261 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (9, 3) (coop=0.8)
+2023-08-23 10:47:01,266 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 1 at location (18, 3) (coop=0.8)
+2023-08-23 10:47:01,270 - INFO  [lbf_heuristic_agents.py:_game_loop():l 59] Initial observation:
+2023-08-23 10:47:01,272 - INFO  [lbf_heuristic_agents.py:_game_loop():l 60] Observation(field=array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        2, 0, 0],
+       [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0,
+        2, 0, 0],
+       [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0]], dtype=int32), actions=[<Action.NONE: 0>, <Action.NORTH: 1>, <Action.SOUTH: 2>, <Action.WEST: 3>, <Action.EAST: 4>], players=[PlayerObservation(position=(10, 20), level=1, history=[], reward=0, is_self=True, goal_position=None, self_observed_position=None), PlayerObservation(position=(13, 24), level=1, history=[], reward=None, is_self=False, goal_position=None, self_observed_position=None)], game_over=False, sight=25, current_step=0)
+2023-08-23 10:47:01,284 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[2 8] (player levels: [1, 1], c=0.800000, d=0.000000)
+2023-08-23 10:47:01,284 - INFO  [lbf_heuristic_agents.py:_game_loop():l 74] Tuple(Discrete(6), Discrete(6))
+2023-08-23 10:47:01,284 - INFO  [lbf_heuristic_agents.py:_game_loop():l 75] Tuple(Box(-1.0, 25.0, (36,), float32), Box(-1.0, 25.0, (36,), float32))
+2023-08-23 10:47:01,289 - INFO  [lbf_heuristic_agents.py:_game_loop():l 78] Using agents with heuristic MultiHeuristicAgent
+2023-08-23 10:47:01,289 - INFO  [lbf_heuristic_agents.py:_game_loop():l 95] Applying multiheuristic labeled 'SOCIAL1'
+2023-08-23 10:47:01,290 - INFO  [agent.py:  __init__():l 48] Setting up agent 0 with level 1
+2023-08-23 10:47:01,294 - INFO  [multi_heuristic_agents_value_function.py:set_abilities():l 172] Agent abilities: {'goal': {'location': True, 'location_history': False, 'distance': True, 'level': False, 'focus': True}, 'own': {'location': True, 'location_history': True, 'level': True, 'understands_action': True, 'remembers_action': True, 'next_action': False, 'next_location': False, 'competitive': False, 'opportunistic': False, 'selfless': True}, 'other': {'location': True, 'level': False, 'goal': {'location': False, 'distance': False, 'level': False}, 'fairness': False, 'next_action': False, 'next_location': False}}
+2023-08-23 10:47:01,295 - INFO  [multi_heuristic_agents_value_function.py:  __init__():l 154] Setup Agent as MultiHeuristicAgent 0 with level 1 and strategy social1
+2023-08-23 10:47:01,299 - INFO  [agent.py:  __init__():l 48] Setting up agent 1 with level 1
+2023-08-23 10:47:01,300 - INFO  [multi_heuristic_agents_value_function.py:set_abilities():l 172] Agent abilities: {'goal': {'location': True, 'location_history': False, 'distance': True, 'level': False, 'focus': True}, 'own': {'location': True, 'location_history': True, 'level': True, 'understands_action': True, 'remembers_action': True, 'next_action': False, 'next_location': False, 'competitive': False, 'opportunistic': False, 'selfless': True}, 'other': {'location': True, 'level': False, 'goal': {'location': False, 'distance': False, 'level': False}, 'fairness': False, 'next_action': False, 'next_location': False}}
+2023-08-23 10:47:01,304 - INFO  [multi_heuristic_agents_value_function.py:  __init__():l 154] Setup Agent as MultiHeuristicAgent 1 with level 1 and strategy social1
+2023-08-23 10:47:01,308 - INFO  [multi_heuristic_agents_value_function.py:     _step():l 838] no sufficient action history for forbidding actions
+2023-08-23 10:47:01,313 - INFO  [multi_heuristic_agents_value_function.py:     _step():l 838] no sufficient action history for forbidding actions
+2023-08-23 10:47:01,320 - INFO  [multi_heuristic_agents_value_function.py:     _step():l 838] no sufficient action history for forbidding actions
+2023-08-23 10:47:01,322 - INFO  [multi_heuristic_agents_value_function.py:     _step():l 838] no sufficient action history for forbidding actions
+2023-08-23 10:47:01,330 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 10:47:01,340 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 10:47:01,342 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 10:47:01,346 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 10:47:01,349 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 10:47:01,357 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 10:47:01,362 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 10:47:01,366 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-23 10:47:01,372 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 10:47:01,373 - INFO  [environment.py:spawn_food():l 413] Spawning 1 cooperative, 0 individual, and 0 distractor items
+2023-08-23 10:47:01,373 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-23 10:47:01,373 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (12, 13) (coop=0.8)
+2023-08-23 10:47:01,377 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 13: Player(s) [0 1] loaded food with level(s) [1. 1.] (type: [2 2], location: [[ 8 23]
+ [ 9 22]])
+2023-08-23 10:47:01,381 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[2 8] (player levels: [1, 1], c=0.800000, d=0.000000)
+2023-08-23 10:47:01,397 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 19)]
+2023-08-23 10:47:01,398 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 19)]
+2023-08-23 10:47:01,405 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 19)]
+2023-08-23 10:47:01,423 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 19)]
+2023-08-23 10:47:01,431 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(2, 20)]
+2023-08-23 10:47:01,431 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 10:47:01,435 - INFO  [environment.py:spawn_food():l 413] Spawning 1 cooperative, 0 individual, and 0 distractor items
+2023-08-23 10:47:01,435 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (3, 17) (coop=0.8)
+2023-08-23 10:47:01,439 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 33: Player(s) [0 1] loaded food with level(s) [1. 1.] (type: [2 2], location: [[ 2 20]
+ [ 2 18]])
+2023-08-23 10:47:01,443 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[2 8] (player levels: [1, 1], c=0.800000, d=0.000000)
+2023-08-23 10:47:01,446 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 18)]
+2023-08-23 10:47:01,447 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 18)]
+2023-08-23 10:47:01,451 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 18)]
+2023-08-23 10:47:01,457 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 18)]
+2023-08-23 10:47:01,459 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 18)]
+2023-08-23 10:47:01,466 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 18)]
+2023-08-23 10:47:01,470 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 18)]
+2023-08-23 10:47:01,483 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 10:47:01,484 - INFO  [environment.py:spawn_food():l 413] Spawning 1 cooperative, 0 individual, and 0 distractor items
+2023-08-23 10:47:01,488 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (20, 9) (coop=0.8)
+2023-08-23 10:47:01,495 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 42: Player(s) [0 1] loaded food with level(s) [1. 1.] (type: [2 2], location: [[ 2 17]
+ [ 3 18]])
+2023-08-23 10:47:01,498 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[2 8] (player levels: [1, 1], c=0.800000, d=0.000000)
+2023-08-23 10:47:01,540 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(11, 13)]
+2023-08-23 10:47:01,541 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(11, 13)]
+2023-08-23 10:47:01,545 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(11, 13)]
+2023-08-23 10:47:01,551 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(11, 13)]
+2023-08-23 10:47:01,553 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 10:47:01,556 - INFO  [environment.py:spawn_food():l 413] Spawning 1 cooperative, 0 individual, and 0 distractor items
+2023-08-23 10:47:01,556 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (23, 11) (coop=0.8)
+2023-08-23 10:47:01,560 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 61: Player(s) [0 1] loaded food with level(s) [1. 1.] (type: [2 2], location: [[11 13]
+ [12 12]])
+2023-08-23 10:47:01,564 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[2 8] (player levels: [1, 1], c=0.800000, d=0.000000)
+2023-08-23 10:47:01,591 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 10:47:01,592 - INFO  [environment.py:spawn_food():l 413] Spawning 1 cooperative, 0 individual, and 0 distractor items
+2023-08-23 10:47:01,596 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (12, 6) (coop=0.8)
+2023-08-23 10:47:01,602 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 66: Player(s) [0 1] loaded food with level(s) [1. 1.] (type: [2 2], location: [[13 14]
+ [14 13]])
+2023-08-23 10:47:01,605 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[2 8] (player levels: [1, 1], c=0.800000, d=0.000000)
+2023-08-23 10:47:01,623 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(17, 13)]
+2023-08-23 10:47:01,624 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(17, 13)]
+2023-08-23 10:47:01,628 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(17, 13)]
+2023-08-23 10:47:01,632 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 10:47:01,635 - INFO  [environment.py:spawn_food():l 413] Spawning 1 cooperative, 0 individual, and 0 distractor items
+2023-08-23 10:47:01,635 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (5, 6) (coop=0.8)
+2023-08-23 10:47:01,640 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 74: Player(s) [0 1] loaded food with level(s) [1. 1.] (type: [2 2], location: [[16 14]
+ [17 13]])
+2023-08-23 10:47:01,644 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[2 8] (player levels: [1, 1], c=0.800000, d=0.000000)
+2023-08-23 10:47:01,662 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(20, 10)]
+2023-08-23 10:47:01,663 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(20, 10)]
+2023-08-23 10:47:01,669 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(20, 10)]
+2023-08-23 10:47:01,671 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(20, 10)]
+2023-08-23 10:47:01,675 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 10:47:01,679 - INFO  [environment.py:spawn_food():l 413] Spawning 1 cooperative, 0 individual, and 0 distractor items
+2023-08-23 10:47:01,679 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (22, 19) (coop=0.8)
+2023-08-23 10:47:01,683 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 85: Player(s) [0 1] loaded food with level(s) [1. 1.] (type: [2 2], location: [[19  9]
+ [20 10]])
+2023-08-23 10:47:01,687 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[2 8] (player levels: [1, 1], c=0.800000, d=0.000000)
+2023-08-23 10:47:01,691 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(22, 11)]
+2023-08-23 10:47:01,697 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(22, 11)]
+2023-08-23 10:47:01,698 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(22, 11)]
+2023-08-23 10:47:01,702 - INFO  [environment.py:      step():l 797] Respawning food (9 foods on field)
+2023-08-23 10:47:01,705 - INFO  [environment.py:spawn_food():l 413] Spawning 1 cooperative, 0 individual, and 0 distractor items
+2023-08-23 10:47:01,705 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (20, 4) (coop=0.8)
+2023-08-23 10:47:01,710 - INFO  [lbf_heuristic_agents.py:_game_loop():l 179] Step 92: Player(s) [0 1] loaded food with level(s) [1. 1.] (type: [2 2], location: [[23 10]
+ [22 11]])
+2023-08-23 10:47:01,714 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[1 2] count=[2 8] (player levels: [1, 1], c=0.800000, d=0.000000)
+2023-08-23 10:47:01,752 - INFO  [lbf_heuristic_agents.py:_game_loop():l 217] -------- SUCCESS - Step 100 - N collected food per player: [8, 8] (total value: [8.0, 8.0]), N cooperative actions: [8, 8]
+2023-08-23 10:47:01,766 - INFO  [run_experiments.py:run_experiment():l 110] Saving results to temp/Foraging-25x25-2p-10f-0.8coop-v2_game_data_trial_00.csv

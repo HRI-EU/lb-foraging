@@ -1,0 +1,29 @@
+# Settings file to run LBF simulation
+debug: False
+seed: 741  # set to None for random initialization
+fps: 10  # maximum frames per second
+experiment:
+  ntrials: 1
+  heuristics:  # run experiment for the following heuristics
+    - 'BASELINE'
+    - 'COOPERATIVE'  # uses goal value function, like 'ADAPTIVE', but always acts cooperatively (same as SOCIAL2)
+environment:
+  coop: 1.0
+  size: 25
+  sight: 25
+  nplayers: 2
+  nfood: 10
+  thresh_respawn_food: 9  # when to re-spawn food, if -1, no respawn
+  distractors: 0.0 # probability of spawning a distractor at initialization, respawning will not generate distractors
+  max_episode_steps: 100
+agents:
+  heuristic: 'MultiHeuristicAgent'
+  abilities: 'BASELINE'
+  patience: 15  # number of maximum loading attempts before disregarding a target (assuming "remembers_action" is True)
+  memory: 20  # memory size in environment steps/iterations (assuming "location_history" or "remembers_action" are True)
+  levels: [1, 1]
+outpath: './temp/'  # save path for output data
+analysis:
+  nperm: 500
+  sources: 'actions'  #  'closest_distance'
+  source_encoding: 'binary'

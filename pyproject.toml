@@ -1,0 +1,25 @@
+[tool.black]
+line_length = 80
+
+[tool.pylint.messages_control]
+max-line-length = 120
+
+# enable errors only
+enable     = [ 'E' ]
+
+# disable all warning, convention, refactoring issues
+# and E0602: undefined variables
+disable    = [ 'W', 'C', 'R', 'E0602', 'bad-option-value', 'import-error']
+
+[tool.pylint.basic]
+good-names = [
+  "a", "c", "l", "m", "i",  # iterators
+  "mi", "p",  # fixed variable names in data analysis
+  "ax",  # matplotlib axis
+  "df",  # pandas DataFrame
+  "_", "__", # unneeded variable
+  "T", # generic type
+  "X", "x",
+  "Y", "y",
+  "bar",
+]

@@ -1,0 +1,191 @@
+2023-08-22 15:27:52,932 - INFO  [run_experiments.py:run_experiment():l 47] Running experiments using the MultiHeuristicAgent class with ability BASELINE
+2023-08-22 15:27:52,932 - INFO  [run_experiments.py:run_experiment():l 77] Registering environment Foraging-25x25-2p-10f-1.0coop-v2
+2023-08-22 15:27:52,933 - INFO  [run_experiments.py:run_experiment():l 93] Setting environment main seed to 741
+2023-08-22 15:27:52,938 - INFO  [environment.py:spawn_food():l 413] Spawning 10 cooperative, 0 individual, and 0 distractor items
+2023-08-22 15:27:52,942 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (22, 13) (coop=1.0)
+2023-08-22 15:27:52,948 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (2, 21) (coop=1.0)
+2023-08-22 15:27:52,952 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (4, 8) (coop=1.0)
+2023-08-22 15:27:52,957 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (19, 17) (coop=1.0)
+2023-08-22 15:27:52,963 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (8, 17) (coop=1.0)
+2023-08-22 15:27:52,967 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (5, 1) (coop=1.0)
+2023-08-22 15:27:52,972 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-22 15:27:52,973 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (23, 7) (coop=1.0)
+2023-08-22 15:27:52,977 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-22 15:27:52,978 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (12, 14) (coop=1.0)
+2023-08-22 15:27:52,982 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (6, 13) (coop=1.0)
+2023-08-22 15:27:52,987 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (19, 5) (coop=1.0)
+2023-08-22 15:27:52,992 - INFO  [run_experiments.py:run_experiment():l 103] Starting trial number 0
+2023-08-22 15:27:52,997 - INFO  [environment.py:spawn_food():l 413] Spawning 10 cooperative, 0 individual, and 0 distractor items
+2023-08-22 15:27:53,002 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (8, 22) (coop=1.0)
+2023-08-22 15:27:53,007 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (23, 21) (coop=1.0)
+2023-08-22 15:27:53,012 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-22 15:27:53,013 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (17, 22) (coop=1.0)
+2023-08-22 15:27:53,017 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-22 15:27:53,018 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (2, 19) (coop=1.0)
+2023-08-22 15:27:53,028 - INFO  [environment.py:_spawn_items():l 298] Spawning food not successful
+2023-08-22 15:27:53,033 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (20, 20) (coop=1.0)
+2023-08-22 15:27:53,038 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (17, 14) (coop=1.0)
+2023-08-22 15:27:53,039 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (7, 5) (coop=1.0)
+2023-08-22 15:27:53,043 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (14, 14) (coop=1.0)
+2023-08-22 15:27:53,048 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (9, 3) (coop=1.0)
+2023-08-22 15:27:53,055 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (18, 3) (coop=1.0)
+2023-08-22 15:27:53,061 - INFO  [lbf_heuristic_agents.py:_game_loop():l 59] Initial observation:
+2023-08-22 15:27:53,065 - INFO  [lbf_heuristic_agents.py:_game_loop():l 60] Observation(field=array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        2, 0, 0],
+       [0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0,
+        2, 0, 0],
+       [0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0]], dtype=int32), actions=[<Action.NONE: 0>, <Action.NORTH: 1>, <Action.SOUTH: 2>, <Action.WEST: 3>, <Action.EAST: 4>], players=[PlayerObservation(position=(10, 20), level=1, history=[], reward=0, is_self=True, goal_position=None, self_observed_position=None), PlayerObservation(position=(13, 24), level=1, history=[], reward=None, is_self=False, goal_position=None, self_observed_position=None)], game_over=False, sight=25, current_step=0)
+2023-08-22 15:27:53,074 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[2] count=[10] (player levels: [1, 1], c=1.000000, d=0.000000)
+2023-08-22 15:27:53,078 - INFO  [lbf_heuristic_agents.py:_game_loop():l 74] Tuple(Discrete(6), Discrete(6))
+2023-08-22 15:27:53,078 - INFO  [lbf_heuristic_agents.py:_game_loop():l 75] Tuple(Box(-1.0, 25.0, (36,), float32), Box(-1.0, 25.0, (36,), float32))
+2023-08-22 15:27:53,083 - INFO  [lbf_heuristic_agents.py:_game_loop():l 78] Using agents with heuristic MultiHeuristicAgent
+2023-08-22 15:27:53,083 - INFO  [lbf_heuristic_agents.py:_game_loop():l 95] Applying multiheuristic labeled 'BASELINE'
+2023-08-22 15:27:53,083 - INFO  [agent.py:  __init__():l 48] Setting up agent 0 with level 1
+2023-08-22 15:27:53,088 - INFO  [multi_heuristic_agents_value_function.py:set_abilities():l 172] Agent abilities: {'goal': {'location': False, 'location_history': False, 'distance': False, 'level': False, 'focus': False}, 'own': {'location': False, 'location_history': False, 'level': False, 'understands_action': False, 'remembers_action': False, 'next_action': False, 'next_location': False, 'competitive': False, 'opportunistic': False, 'selfless': False}, 'other': {'location': False, 'level': False, 'goal': {'location': False, 'distance': False, 'level': False}, 'fairness': False, 'next_action': False, 'next_location': False}}
+2023-08-22 15:27:53,088 - INFO  [multi_heuristic_agents_value_function.py:  __init__():l 154] Setup Agent as MultiHeuristicAgent 0 with level 1 and strategy baseline
+2023-08-22 15:27:53,092 - INFO  [agent.py:  __init__():l 48] Setting up agent 1 with level 1
+2023-08-22 15:27:53,093 - INFO  [multi_heuristic_agents_value_function.py:set_abilities():l 172] Agent abilities: {'goal': {'location': False, 'location_history': False, 'distance': False, 'level': False, 'focus': False}, 'own': {'location': False, 'location_history': False, 'level': False, 'understands_action': False, 'remembers_action': False, 'next_action': False, 'next_location': False, 'competitive': False, 'opportunistic': False, 'selfless': False}, 'other': {'location': False, 'level': False, 'goal': {'location': False, 'distance': False, 'level': False}, 'fairness': False, 'next_action': False, 'next_location': False}}
+2023-08-22 15:27:53,097 - INFO  [multi_heuristic_agents_value_function.py:  __init__():l 154] Setup Agent as MultiHeuristicAgent 1 with level 1 and strategy baseline
+2023-08-22 15:27:53,170 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(9, 22)]
+2023-08-22 15:27:53,185 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(17, 21)]
+2023-08-22 15:27:53,188 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(17, 21)]
+2023-08-22 15:27:53,197 - INFO  [lbf_heuristic_agents.py:_game_loop():l 217] -------- SUCCESS - Step 100 - N collected food per player: [0, 0] (total value: [0, 0]), N cooperative actions: [0, 0]
+2023-08-22 15:27:53,209 - INFO  [run_experiments.py:run_experiment():l 110] Saving results to Foraging-25x25-2p-10f-1.0coop-v2_game_data_trial_00.csv
+2023-08-22 15:27:53,210 - INFO  [run_experiments.py:run_experiment():l 93] Setting environment main seed to 742
+2023-08-22 15:27:53,214 - INFO  [environment.py:spawn_food():l 413] Spawning 10 cooperative, 0 individual, and 0 distractor items
+2023-08-22 15:27:53,217 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (11, 2) (coop=1.0)
+2023-08-22 15:27:53,217 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (12, 8) (coop=1.0)
+2023-08-22 15:27:53,221 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (14, 22) (coop=1.0)
+2023-08-22 15:27:53,221 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (11, 10) (coop=1.0)
+2023-08-22 15:27:53,225 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (17, 12) (coop=1.0)
+2023-08-22 15:27:53,230 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (16, 6) (coop=1.0)
+2023-08-22 15:27:53,234 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (21, 8) (coop=1.0)
+2023-08-22 15:27:53,238 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (4, 8) (coop=1.0)
+2023-08-22 15:27:53,243 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (17, 16) (coop=1.0)
+2023-08-22 15:27:53,247 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (7, 11) (coop=1.0)
+2023-08-22 15:27:53,252 - INFO  [run_experiments.py:run_experiment():l 103] Starting trial number 1
+2023-08-22 15:27:53,256 - INFO  [environment.py:spawn_food():l 413] Spawning 10 cooperative, 0 individual, and 0 distractor items
+2023-08-22 15:27:53,260 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (19, 9) (coop=1.0)
+2023-08-22 15:27:53,264 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (4, 11) (coop=1.0)
+2023-08-22 15:27:53,269 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (12, 4) (coop=1.0)
+2023-08-22 15:27:53,273 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (4, 5) (coop=1.0)
+2023-08-22 15:27:53,277 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (8, 13) (coop=1.0)
+2023-08-22 15:27:53,282 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (11, 22) (coop=1.0)
+2023-08-22 15:27:53,290 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (4, 8) (coop=1.0)
+2023-08-22 15:27:53,296 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (12, 8) (coop=1.0)
+2023-08-22 15:27:53,300 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (21, 13) (coop=1.0)
+2023-08-22 15:27:53,304 - INFO  [environment.py:_spawn_items():l 300] 	Spawning food with level 2 at location (1, 1) (coop=1.0)
+2023-08-22 15:27:53,309 - INFO  [lbf_heuristic_agents.py:_game_loop():l 59] Initial observation:
+2023-08-22 15:27:53,312 - INFO  [lbf_heuristic_agents.py:_game_loop():l 60] Observation(field=array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        2, 0, 0],
+       [0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0]], dtype=int32), actions=[<Action.NONE: 0>, <Action.NORTH: 1>, <Action.SOUTH: 2>, <Action.WEST: 3>, <Action.EAST: 4>], players=[PlayerObservation(position=(23, 3), level=1, history=[], reward=0, is_self=True, goal_position=None, self_observed_position=None), PlayerObservation(position=(4, 0), level=1, history=[], reward=None, is_self=False, goal_position=None, self_observed_position=None)], game_over=False, sight=25, current_step=0)
+2023-08-22 15:27:53,320 - INFO  [lbf_heuristic_agents.py:print_food_dist():l 43] Foods on field: level=[2] count=[10] (player levels: [1, 1], c=1.000000, d=0.000000)
+2023-08-22 15:27:53,324 - INFO  [lbf_heuristic_agents.py:_game_loop():l 74] Tuple(Discrete(6), Discrete(6))
+2023-08-22 15:27:53,324 - INFO  [lbf_heuristic_agents.py:_game_loop():l 75] Tuple(Box(-1.0, 25.0, (36,), float32), Box(-1.0, 25.0, (36,), float32))
+2023-08-22 15:27:53,329 - INFO  [lbf_heuristic_agents.py:_game_loop():l 78] Using agents with heuristic MultiHeuristicAgent
+2023-08-22 15:27:53,329 - INFO  [lbf_heuristic_agents.py:_game_loop():l 95] Applying multiheuristic labeled 'BASELINE'
+2023-08-22 15:27:53,329 - INFO  [agent.py:  __init__():l 48] Setting up agent 0 with level 1
+2023-08-22 15:27:53,333 - INFO  [multi_heuristic_agents_value_function.py:set_abilities():l 172] Agent abilities: {'goal': {'location': False, 'location_history': False, 'distance': False, 'level': False, 'focus': False}, 'own': {'location': False, 'location_history': False, 'level': False, 'understands_action': False, 'remembers_action': False, 'next_action': False, 'next_location': False, 'competitive': False, 'opportunistic': False, 'selfless': False}, 'other': {'location': False, 'level': False, 'goal': {'location': False, 'distance': False, 'level': False}, 'fairness': False, 'next_action': False, 'next_location': False}}
+2023-08-22 15:27:53,334 - INFO  [multi_heuristic_agents_value_function.py:  __init__():l 154] Setup Agent as MultiHeuristicAgent 0 with level 1 and strategy baseline
+2023-08-22 15:27:53,338 - INFO  [agent.py:  __init__():l 48] Setting up agent 1 with level 1
+2023-08-22 15:27:53,338 - INFO  [multi_heuristic_agents_value_function.py:set_abilities():l 172] Agent abilities: {'goal': {'location': False, 'location_history': False, 'distance': False, 'level': False, 'focus': False}, 'own': {'location': False, 'location_history': False, 'level': False, 'understands_action': False, 'remembers_action': False, 'next_action': False, 'next_location': False, 'competitive': False, 'opportunistic': False, 'selfless': False}, 'other': {'location': False, 'level': False, 'goal': {'location': False, 'distance': False, 'level': False}, 'fairness': False, 'next_action': False, 'next_location': False}}
+2023-08-22 15:27:53,344 - INFO  [multi_heuristic_agents_value_function.py:  __init__():l 154] Setup Agent as MultiHeuristicAgent 1 with level 1 and strategy baseline
+2023-08-22 15:27:53,367 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 5)]
+2023-08-22 15:27:53,368 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(3, 5)]
+2023-08-22 15:27:53,377 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(4, 6)]
+2023-08-22 15:27:53,381 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(4, 7)]
+2023-08-22 15:27:53,405 - INFO  [environment.py:      step():l 764] Player level (1) not sufficient to load food (2), player position: [(5, 8)]
+2023-08-22 15:27:53,413 - INFO  [lbf_heuristic_agents.py:_game_loop():l 217] -------- SUCCESS - Step 100 - N collected food per player: [0, 0] (total value: [0, 0]), N cooperative actions: [0, 0]
+2023-08-22 15:27:53,425 - INFO  [run_experiments.py:run_experiment():l 110] Saving results to Foraging-25x25-2p-10f-1.0coop-v2_game_data_trial_01.csv
