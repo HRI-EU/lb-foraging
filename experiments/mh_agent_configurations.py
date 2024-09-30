@@ -77,9 +77,7 @@ ability_sets["EGOISTIC"] = EGOISTIC
 # ------------------------------------- #
 # SOCIAL1 (former H2) agent, goes to the visible food that is closest to the
 # center of all visible players
-SOCIAL1 = deepcopy(
-    EGOISTIC
-)  # H1 can do everything H1 can do and is aware of others
+SOCIAL1 = deepcopy(EGOISTIC)  # H1 can do everything H1 can do and is aware of others
 SOCIAL1["other"]["location"] = True
 SOCIAL1["goal"]["level"] = False
 ability_sets["SOCIAL1"] = SOCIAL1
@@ -112,7 +110,7 @@ ability_sets["COOPERATIVE"] = COOPERATIVE
 # Goes to the one visible food which is targeted by any other player such
 # that the sum of their levels is sufficient to load the food
 # = coming for help
-ADAPTIVE = deepcopy(SOCIAL2)
+ADAPTIVE = deepcopy(COOPERATIVE)
 ability_sets["ADAPTIVE"] = ADAPTIVE
 
 # ------------------------------------- #

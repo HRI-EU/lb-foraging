@@ -138,8 +138,8 @@ class MultiHeuristicAgent(Agent):
         self.location_history = deque(maxlen=location_memory_size)
         self.action_history = deque(maxlen=location_memory_size)
         self.patience = patience
+        self.steps_waited = 0
         self.forbidden_action = None
-        self.attempted_load = 0
         self.fairness = 0.5  # capped at 0 and 1
         self.fairness_slope = 0.05
         self.focus = 4  # how long to (at least) focus on a goal
@@ -177,13 +177,11 @@ class MultiHeuristicAgent(Agent):
             else:
                 raise RuntimeError("Invalid specification of abilities.")
         else:
-            logging.warning(
-                "No abilities specified, applying default abilities (None)"
-            )
+            logging.warning("No abilities specified, applying default abilities (None)")
             self.abilities = mhah.build_abilities_dict()
 
-    def _consumable(self, obs, coords, max_food_level=1):
-        """Check if food item at location can be consumed
+    def _consumable_individually(self, obs, coords, max_food_level=1):
+        """Check if food item at location can be consumed individually
 
         Given food coordinates, check if food at that location is consumable.
         If an item is consumable is defined by its presence and level at "coords".
@@ -333,7 +331,7 @@ class MultiHeuristicAgent(Agent):
         goal_other_other_distance = mhah.calculate_distance(
             X=np.array(goal_other), Y=np.array(start_other), metric="cityblock"
         )
-        consumable_by_ego_alone = self._consumable(
+        consumable_by_ego_alone = self._consumable_individually(
             obs, goal_other, max_food_level=level_ego
         )
         # Steal other's goal if feasible, otherwise look for the closest food that
@@ -358,12 +356,12 @@ class MultiHeuristicAgent(Agent):
                 "Agent %d adaptive cooperative goal selected: loc %s"  # pylint: disable=C0209
                 % (self.player, cf_together["location"])
             )
-            return cf_together["location"]
+            return cf_together["location"], True
         logging.info(  # pylint: disable=W1201
             "Agent %d adaptive ego goal selected: loc %s"  # pylint: disable=C0209
             % (self.player, cf_ego["location"])
         )
-        return cf_ego["location"]
+        return cf_ego["location"], False
 
     def _strategic_goal(
         self,
@@ -410,7 +408,12 @@ class MultiHeuristicAgent(Agent):
             targets
 
         Return:
-            next goal location under consideration of given strategy
+            tuple
+                next goal location under consideration of given strategy
+            bool
+                whether goal is cooperative
+            dict
+                goal values of all targets considered
         """
         cf_ego, cf_other, cf_together = self._compute_cf_based_goals(
             obs,
@@ -441,6 +444,7 @@ class MultiHeuristicAgent(Agent):
                     goal_other,
                     ignore_locs,
                 ),
+                False,
                 goal_values,
             )
 
@@ -448,7 +452,7 @@ class MultiHeuristicAgent(Agent):
             goal_center = self._closest_food(
                 obs, max_food_level=None, start=center, ignore_locs=ignore_locs
             )
-            return goal_center, goal_values
+            return goal_center, False, goal_values
 
         if self.strategy == "social2":
             goal_center = self._closest_food(
@@ -457,15 +461,19 @@ class MultiHeuristicAgent(Agent):
                 start=center,
                 ignore_locs=ignore_locs,
             )
-            return goal_center, goal_values
+            return goal_center, False, goal_values
 
         if self.strategy == "cooperative":
             logging.debug("Return location %s", cf_together["location"])
-            return cf_together["location"], goal_values
+            return cf_together["location"], True, goal_values
 
         if self.strategy == "adaptive":
+            location, coop_goal = self._return_adaptive_strategic_goal(
+                cf_together, cf_ego
+            )
             return (
-                self._return_adaptive_strategic_goal(cf_together, cf_ego),
+                location,
+                coop_goal,
                 goal_values,
             )
 
@@ -473,9 +481,7 @@ class MultiHeuristicAgent(Agent):
             "Unknown basic strategy %s" % self.strategy  # pylint: disable=C0209
         )
 
-    def _closest_food(
-        self, obs, max_food_level=None, start=None, ignore_locs=None
-    ):
+    def _closest_food(self, obs, max_food_level=None, start=None, ignore_locs=None):
         """Find closest food (substitutes agent method with same name)
 
         Find food closest to own position or start position. Identification may
@@ -539,8 +545,21 @@ class MultiHeuristicAgent(Agent):
             return None
         return (r[min_idx], c[min_idx])
 
+    def _partner_arrived(self, food_loc, partner_loc):
+        """Check if partner is adjacent to food"""
+        return (
+            abs(partner_loc[0] - food_loc[0]) == 1
+            and partner_loc[1] == food_loc[1]
+            or abs(partner_loc[1] - food_loc[1]) == 1
+            and partner_loc[0] == food_loc[0]
+        )
+
     def ready_to_load(self, food_loc, maxattempts=None):
         """Checks whether conditions to consume a target have been met.
+
+        Checks if goal has been reached and if the number of loading attempts
+        does not exceed the specified limit. This does not check if the level
+        is compatible.
 
         The output can be affected by understanding and memory abilities
         of the agent.
@@ -561,18 +580,13 @@ class MultiHeuristicAgent(Agent):
             if food_loc is None:
                 return False
             y, x = self.observed_position
-            food_in_neighborhood = (
-                abs(food_loc[0] - y) + abs(food_loc[1] - x)
-            ) == 1
+            food_in_neighborhood = (abs(food_loc[0] - y) + abs(food_loc[1] - x)) == 1
             # if goal has been reached, take it
             # (unless the agent has just failed doing so)
-            if (
-                self.abilities["own"]["understands_action"]
-                and food_in_neighborhood
-            ):
+            if self.abilities["own"]["understands_action"] and food_in_neighborhood:
                 if (
                     self.abilities["own"]["remembers_action"]
-                    and self.attempted_load >= maxattempts
+                    and self.steps_waited >= maxattempts
                 ):
                     logging.info(
                         "Agent %s: item can not be loaded. Patience exceeded",
@@ -592,8 +606,8 @@ class MultiHeuristicAgent(Agent):
         if maxattempts is None:
             maxattempts = self.patience
         if self.abilities["own"]["remembers_action"]:
-            self.attempted_load += 1
-            if self.attempted_load >= maxattempts:
+            self.steps_waited += 1
+            if self.steps_waited >= maxattempts:
                 self.location_history.append(food_loc)
                 logging.info(
                     "Agent %s patience exceeded. Adding goal location %s to ignore list",
@@ -601,6 +615,21 @@ class MultiHeuristicAgent(Agent):
                     food_loc,
                 )
         return Action.LOAD
+
+    def _wait(self, food_loc, maxattempts=None):
+        """Wait at current position and log waiting time if capable"""
+        if maxattempts is None:
+            maxattempts = self.patience
+        if self.abilities["own"]["remembers_action"]:
+            self.steps_waited += 1
+            if self.steps_waited >= maxattempts:
+                self.location_history.append(food_loc)
+                logging.info(
+                    "Agent %s patience exceeded. Adding goal location %s to ignore list",
+                    self.player,
+                    food_loc,
+                )
+        return Action.NONE
 
     def _check_goal_status(self, obs):
         """reset goal location if it has been consumed"""
@@ -627,7 +656,7 @@ class MultiHeuristicAgent(Agent):
         int
             selected action
         """
-        self.attempted_load = 0
+        self.steps_waited = 0
         y, x = self.observed_position
         r, c = target
         # warning:
@@ -671,7 +700,7 @@ class MultiHeuristicAgent(Agent):
         if allowed is None:
             allowed = [0, 1, 2, 3, 4, 5]
 
-        self.attempted_load = 0
+        self.steps_waited = 0
         y, x = self.observed_position
         r, c = target
 
@@ -727,30 +756,30 @@ class MultiHeuristicAgent(Agent):
                 if (allowed[action] == Action.EAST) and (
                     (y, x + 1) not in self.location_history
                 ):
-                    self.attempted_load = 0
+                    self.steps_waited = 0
                     return Action.EAST
                 if (allowed[action] == Action.WEST) and (
                     (y, x - 1) not in self.location_history
                 ):
-                    self.attempted_load = 0
+                    self.steps_waited = 0
                     return Action.WEST
                 if (allowed[action] == Action.NORTH) and (
                     (y - 1, x) not in self.location_history
                 ):
-                    self.attempted_load = 0
+                    self.steps_waited = 0
                     return Action.NORTH
                 if (allowed[action] == Action.SOUTH) and (
                     (y + 1, x) not in self.location_history
                 ):
-                    self.attempted_load = 0
+                    self.steps_waited = 0
                     return Action.SOUTH
                 if (
                     (allowed[action] == Action.LOAD)
                     and self.abilities["own"]["remembers_action"]
-                    and not self.attempted_load
+                    and not self.steps_waited
                 ):
                     # TODO: proper ability check and loading call
-                    self.attempted_load += 1
+                    self.steps_waited += 1
                     return Action.LOAD
         # if all valid directions have been visited, pick a random one
         return self.random_step(allowed)
@@ -762,10 +791,44 @@ class MultiHeuristicAgent(Agent):
         Only consists of pursuing a set goal. The execution of this step will
         circumvent all remaining 'intelligence' for the respective iteration.
         """
+        logging.debug("Focus step")
         if maxattempts is None:
             maxattempts = self.patience
         if self.ready_to_load(self.goal_location, maxattempts=maxattempts):
-            return self._load(self.goal_location, maxattempts=maxattempts)
+            if not self.abilities["other"]["goal"]["location"]:
+                return self._load(self.goal_location, maxattempts=maxattempts)
+
+            # If target is non-cooperative and can be loaded alone, load
+            if not self.goal_coop and self._consumable_individually(
+                obs, coords=self.goal_location, max_food_level=self.level
+            ):
+                logging.info(
+                    "Consumable alone (%d), attempting to load",
+                    obs.field[self.goal_location],
+                )
+                return self._load(self.goal_location, maxattempts)
+
+            # If target is cooperative and the other player has arrived, load
+            partner_loc = np.array(
+                [player.position for player in obs.players if not player.is_self]
+            )[0]
+            if self.goal_coop and self._partner_arrived(
+                self.goal_location, partner_loc
+            ):
+                logging.info(
+                    "Consumable jointly (%d, %s), partner there (%s) attempting to load",
+                    obs.field[self.goal_location],
+                    self.goal_location,
+                    partner_loc,
+                )
+                return self._load(self.goal_location, maxattempts)
+            # Else, wait
+            logging.info(
+                "Not consumable (%d), waiting",
+                obs.field[self.goal_location],
+            )
+            return self._wait(self.goal_location, maxattempts)
+
         try:
             return self._move_towards(self.goal_location, obs.actions)
         except ValueError:
@@ -855,7 +918,9 @@ class MultiHeuristicAgent(Agent):
             maxattempts = self.patience
 
         # get locations of other agents
-        others_locations = np.array([player.position for player in obs.players])
+        others_locations = np.array(
+            [player.position for player in obs.players if not player.is_self]
+        )
         # get goal locations of other agents
         food_locations = []
         goal_values = []
@@ -865,7 +930,7 @@ class MultiHeuristicAgent(Agent):
 
         if self.abilities["own"][
             "remembers_action"
-        ]:  # and self.attempted_load > maxattempts:
+        ]:  # and self.steps_waited > maxattempts:
             ignore_locs = list(self.location_history)
         else:
             ignore_locs = None
@@ -874,7 +939,7 @@ class MultiHeuristicAgent(Agent):
         for player in obs.players:
             if not player.is_self:
                 # select a target location based on a given strategy
-                food_loc, values = self._strategic_goal(
+                food_loc, coop_goal, values = self._strategic_goal(
                     obs,
                     start_ego=self.observed_position,
                     start_other=player.position,
@@ -890,33 +955,68 @@ class MultiHeuristicAgent(Agent):
         # TODO adapt once there are envs with 3+ agents
         food_loc = food_locations[0]
         goal_values = goal_values[0]
+        partner_loc = tuple(others_locations[0])
+        logging.debug("Player ID %d", self.player)
         logging.debug("Food location %s", food_loc)
+        logging.debug(
+            "Own location %s",
+            np.squeeze(
+                np.array([player.position for player in obs.players if player.is_self])
+            ),
+        )
+        logging.debug("Partner location %s", partner_loc)
+        logging.debug("Cooperative goal %s", coop_goal)
         # If no food is available at all with the selected strategy make a
         # random step.
         if food_loc is None:
-            logging.info(
-                "Agent %s no food found, ignorant step instead", self.player
-            )
+            logging.info("Agent %s no food found, ignorant step instead", self.player)
             return self.random_step(obs.actions), goal_values
         self.goal_location = food_loc
+        self.goal_coop = coop_goal
         self.focused = 0
         if self.ready_to_load(food_loc, maxattempts):
-            if self._consumable(
+
+            # If target is non-cooperative and can be loaded alone, load
+            if not coop_goal and self._consumable_individually(
                 obs, coords=food_loc, max_food_level=self.level
             ):
+                logging.info(
+                    "Consumable alone (%d), attempting to load", obs.field[food_loc]
+                )
                 return self._load(food_loc, maxattempts), goal_values
-            blocking_other_agent = any(
+
+            # If target is cooperative and the other player has arrived, load
+            if coop_goal and self._partner_arrived(food_loc, partner_loc):
+                logging.info(
+                    "Consumable jointly (%d, %s), partner there (%s) attempting to load",
+                    obs.field[food_loc],
+                    food_loc,
+                    partner_loc,
+                )
+                return self._load(food_loc, maxattempts), goal_values
+
+            # If blocking other agent from reaching the food, make room
+            if any(
                 [
                     mhah.intheway(self.observed_position, loc_other, food_loc)
                     for loc_other in others_locations
                 ]
-            )
-            if not blocking_other_agent and self.attempted_load < maxattempts:
-                return self._load(food_loc, maxattempts), goal_values
-            if blocking_other_agent:  # or circle (make room)
+            ):
+                logging.info("Blocking agent, moving around")
                 return self._move_around(food_loc, obs.actions), goal_values
-            # Not in the way, but maxattempts reached.
-            return self.random_step(obs.actions), goal_values
+
+            # Not in the way, but max waiting time reached.
+            if self.steps_waited >= maxattempts:
+                return self.random_step(obs.actions), goal_values
+
+            # Else, wait
+            logging.info(
+                "Not blocking, not consumable (%d), waiting",
+                obs.field[food_loc],
+            )
+            return self._wait(food_loc, maxattempts), goal_values
+
+        logging.debug("Not ready to load, MOVE")
         return self._move_towards(food_loc, obs.actions), goal_values
 
     def _step(self, obs):
@@ -940,16 +1040,13 @@ class MultiHeuristicAgent(Agent):
                 try:
                     if (
                         self.action_history[-2] == self.action_history[-1]
-                        and self.location_history[-2]
-                        == self.location_history[-2]
+                        and self.location_history[-2] == self.location_history[-2]
                     ):
                         self.forbidden_action = self.action_history[-1]
                     else:
                         self.forbidden_action = None
                 except IndexError:
-                    logging.info(
-                        "no sufficient action history for forbidding actions"
-                    )
+                    logging.info("no sufficient action history for forbidding actions")
 
         # Focus step: pursue goal if a goal was selected, otherwise reset goal
         # location (e.g., if goal has been consumed).

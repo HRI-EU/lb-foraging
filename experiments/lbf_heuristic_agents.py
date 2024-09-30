@@ -152,14 +152,10 @@ def _game_loop(settings, env, render):
             "Player 1 position: (%d, %d)"  # pylint: disable=C0209
             % env.players[1].position
         )
-        logging.debug(
-            "Selected actions: %s" % actions
-        )  # pylint: disable=W1201,C0209
+        logging.debug("Selected actions: %s" % actions)  # pylint: disable=W1201,C0209
         for agent, obs, i in zip(env.players, nobs, range(n_players)):
             distances_food[i].append(
-                distance_to_closest_food(
-                    agent, env.field.copy(), metric="cityblock"
-                )
+                distance_to_closest_food(agent, env.field.copy(), metric="cityblock")
             )
             distances_agents[i].append(
                 distance_to_closest_agent(
@@ -168,7 +164,6 @@ def _game_loop(settings, env, render):
             )
             coordinates_agents[i]["x"].append(agent.position[0])
             coordinates_agents[i]["y"].append(agent.position[1])
-        logging.debug("Actions: %s" % actions)  # pylint: disable=W1201,C0209
 
         # step() returns five values. These are:
         #  - nobsarray (list of objects): a list of environment-specific
@@ -205,9 +200,7 @@ def _game_loop(settings, env, render):
                     np.array([p.collected_food_type[-1] for p in env.players])[
                         np.where(nreward)[0]
                     ],
-                    np.array([p.position for p in env.players])[
-                        np.where(nreward)[0]
-                    ],
+                    np.array([p.position for p in env.players])[np.where(nreward)[0]],
                 )
             )
             print_food_dist(env)
@@ -246,14 +239,9 @@ def _game_loop(settings, env, render):
     game_data = pd.DataFrame(
         {
             "agent_id": np.array(
-                [
-                    a.player * np.ones(env.current_step, dtype=int)
-                    for a in agents
-                ]
+                [a.player * np.ones(env.current_step, dtype=int) for a in agents]
             ).flatten(),
-            "step": np.array(
-                [np.arange(env.current_step) for a in agents]
-            ).flatten(),
+            "step": np.array([np.arange(env.current_step) for a in agents]).flatten(),
             "coord_x": np.array(
                 [coordinates_agents[a.player]["x"] for a in agents]
             ).flatten(),
@@ -261,9 +249,7 @@ def _game_loop(settings, env, render):
                 [coordinates_agents[a.player]["y"] for a in agents]
             ).flatten(),
             "reward": np.array([a.reward for a in agents]).flatten(),
-            "reward_sum": np.array(
-                [np.cumsum(a.reward) for a in agents]
-            ).flatten(),
+            "reward_sum": np.array([np.cumsum(a.reward) for a in agents]).flatten(),
             "cooperative_actions": np.array(
                 [p.cooperative_actions for p in env.players]
             ).flatten(),
@@ -275,9 +261,7 @@ def _game_loop(settings, env, render):
                 [np.cumsum(p.collected_food) for p in env.players]
             ).flatten(),
             "action": np.array([a.history for a in agents]).flatten(),
-            "goal_value_ego": np.array(
-                [a.goal_value_ego for a in agents]
-            ).flatten(),
+            "goal_value_ego": np.array([a.goal_value_ego for a in agents]).flatten(),
             "goal_value_other": np.array(
                 [a.goal_value_other for a in agents]
             ).flatten(),
@@ -310,9 +294,11 @@ def main(settings, game_count=1, render=False):
                 settings.environment["size"],
             ),
             "max_food": settings.environment["nfood"],
-            "sight": ""
-            if settings.environment["sight"] == settings.environment["size"]
-            else f"-{settings.environment['sight']}s",
+            "sight": (
+                ""
+                if settings.environment["sight"] == settings.environment["size"]
+                else f"-{settings.environment['sight']}s"
+            ),
             "max_episode_steps": settings.environment["max_episode_steps"],
             "thresh_respawn_food": settings.environment["thresh_respawn_food"],
             "force_coop": settings.environment["coop"],
@@ -320,9 +306,7 @@ def main(settings, game_count=1, render=False):
             "grid_observation": False,
         },
     )
-    logging.info(  # pylint: disable=W1201,C0209
-        "Making environment %s" % env_id
-    )
+    logging.info("Making environment %s" % env_id)  # pylint: disable=W1201,C0209
 
     env = gym.make(env_id, sight=settings.environment["sight"])
     # to record a video uncomment + fix the following
@@ -344,16 +328,12 @@ def main(settings, game_count=1, render=False):
             % (episode + 1, game_count)
         )
         df = _game_loop(settings, env, render)
-        df.to_csv(
-            Path(settings["outpath"]).joinpath(f"{env_id}_game_{episode}.csv")
-        )
+        df.to_csv(Path(settings["outpath"]).joinpath(f"{env_id}_game_{episode}.csv"))
     env.close()
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Play the level foraging game."
-    )
+    parser = argparse.ArgumentParser(description="Play the level foraging game.")
 
     parser.add_argument("--render", action="store_true")
     parser.add_argument(
