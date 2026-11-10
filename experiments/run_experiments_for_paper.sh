@@ -28,8 +28,4 @@
 #
 set -e -u -o pipefail
 
-# python run_experiments.py --settings ../config/settings_experiments_asym.yml --outpath "../../lbf_experiments/asymmetric_d_0_0_v11/"
-# python run_experiments.py --settings ../config/settings_experiments_d_0_5.yml --outpath "../../lbf_experiments/shared_goal_dist_0_5_v11/"
-python run_experiments.py --settings ../config/settings_experiments_d_0_0.yml --outpath "../../lbf_experiments/shared_goal_dist_0_0_v13/"
-python run_experiments.py --settings ../config/settings_experiments_asym.yml --outpath "../../lbf_experiments/asymmetric_d_0_0_v13/"
-# python run_experiments.py --settings ../config/settings_experiments_d_0_2.yml --outpath "../../lbf_experiments/shared_goal_dist_0_2_v13/"
+python run_experiments.py --settings ../config/settings_experiments_d_0_0.yml --outpath "../../lbf_experiment_results/"
